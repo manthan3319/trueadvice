@@ -1,5 +1,7 @@
 import React from 'react';
 import { Accounting, AgainstProperty, BusinessLoan, cardloan, ConsultingAdvisory, DirectMutual, groww, GSTRegistration, GSTRepresentation, GSTReturns, GuaranteedPlan, health_insurance, HomeLoan, IncomeRepresentation, IncomeReturns, PersonalLoan, PocketProtect, tdsreturun, terminsurance, TransferLoan } from '../../Images/Images';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const servicesData = [
     {
@@ -105,7 +107,6 @@ const OtherServicesData = [
     },
 ];
 
-
 export const Home_Services = () => {
     return (
         <div className='bg-custome py-[50px]'>
@@ -118,53 +119,59 @@ export const Home_Services = () => {
                         </span>
                     </h1>
                 </div>
-                <div className='mt-[40px]'>
-                    <div><h1 className='text-white lg:text-[28px] font-merriweather  flex gap-[5px] items-center'><span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>Insurance & Investment</h1></div>
-                    <div className='flex flex-wrap gap-[20px] mt-[20px]'>
-                        {servicesData.map((service) => (
-                            <div key={service.id} className='flex py-[15px] lg:w-[18.6%]  flex-col gap-[5px] bg-[#ffffff57] rounded-[10px] service_card border-[1px] border-customGreenDark'>
-                                <div>
-                                    <img src={service.image} alt={service.title} className='rounded-[50%] w-[170px] min-h-[170px] max-h-[170px] m-auto' />
-                                </div>
-                                <div className='text-center mt-[7px]'>
-                                    <h1 className='lg:text-[19px] font-roboto text-customGreenDarker font-bold'>{service.title}</h1>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
 
-                <div className='mt-[40px]'>
-                    <div><h1 className='text-white lg:text-[28px] font-merriweather  flex gap-[5px] items-center'><span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>Cards& Loans</h1></div>
-                    <div className='flex flex-wrap gap-[20px] justify-center mt-[20px]'>
-                        {CardloanData.map((service) => (
-                            <div key={service.id} className='flex py-[15px] lg:w-[23%]  flex-col gap-[5px] bg-[#ffffff57] rounded-[10px] service_card border-[1px] border-customGreenDark'>
-                                <div>
-                                    <img src={service.image} alt={service.title} className='rounded-[50%] w-[170px] min-h-[170px] max-h-[170px] m-auto' />
+                <Tabs className='mt-[40px]'>
+                    <TabList className="flex justify-center gap-[30px] text-white text-[18px] font-bold">
+                        <Tab>Insurance & Investment</Tab>
+                        <Tab>Cards & Loans</Tab>
+                        <Tab>Other Services</Tab>
+                    </TabList>
+
+                    <TabPanel>
+                        <div className='flex flex-wrap gap-[20px] mt-[20px]'>
+                            {servicesData.map((service) => (
+                                <div key={service.id} className='flex py-[15px] lg:w-[18.6%] flex-col gap-[5px] bg-[#ffffff57] rounded-[10px] service_card border-[1px] border-customGreenDark'>
+                                    <div>
+                                        <img src={service.image} alt={service.title} className='rounded-[50%] w-[170px] min-h-[170px] max-h-[170px] m-auto' />
+                                    </div>
+                                    <div className='text-center mt-[7px]'>
+                                        <h1 className='lg:text-[19px] font-roboto text-customGreenDarker font-bold'>{service.title}</h1>
+                                    </div>
                                 </div>
-                                <div className='text-center mt-[7px]'>
-                                    <h1 className='lg:text-[19px] font-roboto text-customGreenDarker font-bold'>{service.title}</h1>
+                            ))}
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel>
+                        <div className='flex flex-wrap gap-[20px] justify-center mt-[20px]'>
+                            {CardloanData.map((service) => (
+                                <div key={service.id} className='flex py-[15px] lg:w-[23%] flex-col gap-[5px] bg-[#ffffff57] rounded-[10px] service_card border-[1px] border-customGreenDark'>
+                                    <div>
+                                        <img src={service.image} alt={service.title} className='rounded-[50%] w-[170px] min-h-[170px] max-h-[170px] m-auto' />
+                                    </div>
+                                    <div className='text-center mt-[7px]'>
+                                        <h1 className='lg:text-[19px] font-roboto text-customGreenDarker font-bold'>{service.title}</h1>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                
-                <div className='mt-[40px]'>
-                    <div><h1 className='text-white lg:text-[28px] font-merriweather  flex gap-[5px] items-center'><span><i class="fa fa-dot-circle-o" aria-hidden="true"></i></span>Other Services</h1></div>
-                    <div className='flex flex-wrap gap-[20px] justify-center mt-[20px]'>
-                        {OtherServicesData.map((service) => (
-                            <div key={service.id} className='flex py-[15px] lg:w-[23%]  flex-col gap-[5px] bg-[#ffffff57] rounded-[10px] service_card border-[1px] border-customGreenDark'>
-                                <div>
-                                    <img src={service.image} alt={service.title} className='rounded-[50%] w-[170px] min-h-[170px] max-h-[170px] m-auto' />
+                            ))}
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel>
+                        <div className='flex flex-wrap gap-[20px] justify-center mt-[20px]'>
+                            {OtherServicesData.map((service) => (
+                                <div key={service.id} className='flex py-[15px] lg:w-[23%] flex-col gap-[5px] bg-[#ffffff57] rounded-[10px] service_card border-[1px] border-customGreenDark'>
+                                    <div>
+                                        <img src={service.image} alt={service.title} className='rounded-[50%] w-[170px] min-h-[170px] max-h-[170px] m-auto' />
+                                    </div>
+                                    <div className='text-center mt-[7px]'>
+                                        <h1 className='lg:text-[19px] font-roboto text-customGreenDarker font-bold'>{service.title}</h1>
+                                    </div>
                                 </div>
-                                <div className='text-center mt-[7px]'>
-                                    <h1 className='lg:text-[19px] font-roboto text-customGreenDarker font-bold'>{service.title}</h1>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                            ))}
+                        </div>
+                    </TabPanel>
+                </Tabs>
             </div>
         </div>
     );
