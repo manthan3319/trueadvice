@@ -3,23 +3,33 @@
 @tailwind utilities;
 
 .navbar::after {
-    left: 0;
-    content: "";
-    position: absolute;
-    background: white;
-    width: 280px;
-    height: 63px;
-    top: 0;
-    z-index: 1;
-    border-radius: 0px 0px 140px;
-    border-right: 11px solid #04251c;
-    z-index: -1;
+  left: 0;
+  content: "";
+  position: absolute;
+  background: white;
+  width: 280px;
+  height: 63px;
+  top: 0;
+  z-index: 1;
+  border-radius: 0px 0px 140px;
+  border-right: 11px solid #04251c;
+  z-index: -1;
 }
 
-.imgcolorchnage{
-    filter: invert(1);
+.imgcolorchnage {
+  filter: invert(1);
 }
 
-.service_card{
-    box-shadow: 0px 2px 7px 0px white;
+.service_card {
+  box-shadow: 0px 2px 7px 0px white;
+}
+
+.about_card{
+    box-shadow: 1px 2px 9px 1px #22493e;
+}
+
+@media only screen and (min-width: 1280px) {
+  .navbar::after {
+    width: 500px;
+  }
 }

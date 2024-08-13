@@ -20,6 +20,7 @@ import Accounting from "../Images/accounting.webp";
 import IncomeRepresentation from "../Images/incometextrepra.jpg";
 import GSTRepresentation from "../Images/gstrepra.webp";
 import ConsultingAdvisory from "../Images/ConsultingAdvisory.png";
+import insurancebg from "../Images/insurancebg.jpg";
 export {
     bg1,
     borderline,
@@ -43,6 +44,7 @@ export {
     Accounting,
     IncomeRepresentation,
     GSTRepresentation,
-    ConsultingAdvisory
+    ConsultingAdvisory,
+    insurancebg
 
 }

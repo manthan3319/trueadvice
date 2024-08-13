@@ -19,16 +19,16 @@ export const Navbar = () => {
       name: "About Us",
       link: "/aboutus"
     },
-    {
-      id: 4,
-      name: "Clients",
-      link: "/clients"
-    },
-    {
-      id: 5,
-      name: "News",
-      link: "/news"
-    },
+    // {
+    //   id: 4,
+    //   name: "Clients",
+    //   link: "/clients"
+    // },
+    // {
+    //   id: 5,
+    //   name: "News",
+    //   link: "/news"
+    // },
     {
       id: 6,
       name: "Faq",
