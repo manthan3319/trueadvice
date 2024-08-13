@@ -71,7 +71,7 @@ export const Home_Slider = () => {
                                     left: 0,
                                     right: 0,
                                     bottom: 0,
-                                    backgroundColor: '#000000ba', 
+                                    backgroundColor: '#0c2a1edb', 
                                     zIndex: 1
                                 }} />
                                 <div className='lg:max-w-[1440px] relative z-20 m-auto w-auto lg:px-[50px] text-white flex justify-center items-center flex-col h-full'>
