@@ -1,11 +1,11 @@
 import React from 'react';
 import Faq from "react-faq-component";
+import { groww } from '../../Images/Images';
+import { Title } from '../Functions/Functions';
 
 export const Home_Faq = () => {
     const data = {
-        title: "FAQ (How it works)",
         rows: [
-            // Existing FAQs
             {
                 title: "What is TrueAdvice?",
                 content: `TrueAdvice is a comprehensive financial service provider offering a range of services including insurance, mutual funds, loans, and tax-related services.`,
@@ -89,19 +89,34 @@ export const Home_Faq = () => {
     };
 
     const styles = {
-        titleTextColor: "blue",
-        rowTitleColor: "blue",
+        titleTextColor: "#043F2E",
+        rowTitleColor: "#043F2E",
+        rowTitleTextSize: '19px',
+        rowContentColor: 'black',
+        rowContentTextSize: '15px',
+        rowTitleFontFamily: 'Merriweather',
+        rowContentFontFamily: 'Roboto',
+        rowTitleFontWeight: 'bold',
     };
 
     const config = {
-        // animate: true,
+        animate: true,
         // arrowIcon: "V",
-        // tabFocus: true
+        tabFocus: true,
+        collapseOnOpen: true,
+
     };
 
     return (
         <div className='py-[50px]'>
-            <div className='lg:max-w-[1440px] m-auto px-[20px]'>
+            <div className='lg:max-w-[1440px] m-auto px-[50px]'>
+                <div>
+                    <Title
+                        title="FAQS"
+                        imageSrc={groww}
+                        textColor="customGreenDark"
+                    />
+                </div>
                 <div>
                     <Faq
                         data={data}

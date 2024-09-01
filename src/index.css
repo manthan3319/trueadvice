@@ -8,7 +8,7 @@
   position: absolute;
   background: white;
   width: 280px;
-  height: 63px;
+  height: 71px;
   top: 0;
   z-index: 1;
   border-radius: 0px 0px 140px;
@@ -24,12 +24,98 @@
   box-shadow: 0px 2px 7px 0px white;
 }
 
-.about_card{
-    box-shadow: 1px 2px 9px 1px #22493e;
+.about_card {
+  box-shadow: 1px 2px 9px 1px #22493e;
 }
 
-@media only screen and (min-width: 1280px) {
+.react-tabs__tab:focus:after {
+  height: 0 !important
+}
+
+.react-tabs__tab--selected {
+  background: #04251c !important;
+  border-color: #aaa;
+  color: white !important;
+  border-radius: 5px 5px 0 0;
+  font-family: 'Roboto' !important;
+}
+
+.from_input {
+  background: none !important;
+  border-bottom: 1px solid white;
+  padding: 12px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contact_icon {
+  align-items: center;
+  animation: pulsing 1.25s cubic-bezier(.66,0,0,1) infinite;
+  background-color: #42db87;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px #999;
+  color: white;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  font-family: sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important;
+  transform: translateY(0);
+  transition: all .3s ease-in-out;
+}
+
+
+/* sm: 640px */
+@media (min-width: 640px) {
+  /* Custom styles for screens 640px and up */
   .navbar::after {
-    width: 500px;
+    width: 320px;
+  }
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+  /* Custom styles for screens 768px and up */
+  .navbar::after {
+    width: 400px;
+  }
+}
+
+/* lg: 1024px */
+@media (min-width: 1024px) {
+  /* Custom styles for screens 1024px and up */
+  .navbar::after {
+    width: 450px;
+  }
+}
+
+/* xl: 1280px */
+@media (min-width: 1280px) {
+  .navbar::after {
+    width: 410px;
+  }
+}
+
+/* 2xl: 1536px */
+@media (min-width: 1536px) {
+  /* Custom styles for screens 1536px and up */
+  .navbar::after {
+    width: 600px;
   }
 }

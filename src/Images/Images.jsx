@@ -21,7 +21,12 @@ import IncomeRepresentation from "../Images/incometextrepra.jpg";
 import GSTRepresentation from "../Images/gstrepra.webp";
 import ConsultingAdvisory from "../Images/ConsultingAdvisory.png";
 import insurancebg from "../Images/insurancebg.jpg";
+import menu from "../Images/menu.png";
+import logo from "../Images/logo.jpg";
+import logo2 from "../Images/logo2.png";
 export {
+    logo2,
+    logo,
     bg1,
     borderline,
     groww,
@@ -45,6 +50,7 @@ export {
     IncomeRepresentation,
     GSTRepresentation,
     ConsultingAdvisory,
-    insurancebg
+    insurancebg,
+    menu
 
 }
